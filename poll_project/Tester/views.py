@@ -20,6 +20,6 @@ def choices(request,questions_id):
             if questions.true_answer==form.cleaned_data['answer']:
                 questions.poll.points +=1
                 questions.poll.save()
-            return redirect('home')
+            return redirect('home')#will return to the homepage
     return render(request, 'testhtml/choices.html',{'choices':choices,'form':form})
 
