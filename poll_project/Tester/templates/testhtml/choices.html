@@ -1,3 +1,9 @@
+{{question.title}}
+{{questions.poll.points}}
 {%for i in choices%}
-{{i.variance}}
+<p>{{i.variance}}</p>
 {%endfor%}
+<form method="POST" action="">
+    {%csrf_token%}
+    {{form}}<input type="submit">
+</form>

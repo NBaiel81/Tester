@@ -1,6 +1,10 @@
-{% for i in questions%}
-{{i.title}}
-{{i.description}}
-{{i.date}}
-{{i.true_answer}}
+
+
+<p> орпос по предмету:{{poll.name}}</p>
+<br>
+{%for i in questions%}
+<a href="{% url 'choices' i.id %}"> {{i.title}}</a>
+<!--{{i.description}}-->
+<!--{{i.date}}-->
+<!--{{i.true_answer}}-->
 {%endfor%}

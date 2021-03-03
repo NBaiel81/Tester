@@ -1,6 +1,7 @@
-maksim
+
 {% for i in poll%}
-{{i.name}}
+<a href="{%url 'questions' i.id%}">{{i.name}}</a>
+<br>
 {{i.date_created}}
-{{i.points}}
+, points:{{i.points}}
 {%endfor%}
